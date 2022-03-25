@@ -12,6 +12,8 @@
     -o, --override     是否覆盖原有文件，默认false，如指定，则无论如何均会删除原图
     -e, --ext          输出图片的格式，默认Jpeg，值为MemoryBmp、Bmp、Emf、Wmf、Gif、Jpeg、Png、Tiff、Exif、Icon 之一
     -q, --quiet        是否静默处理, 不显示处理进度，默认为false
+    -t, --filter       过滤需要处理的文件后缀，默认jpg jpeg png bmp gif
+    -a, --angle        顺时针旋转角度0-360，默认为0， 不旋转
 
 ### 调整图片大小 宽不100像素， 高100像素， 输出格式为jpeg，不回显处理进程
 ```Bash
@@ -36,4 +38,8 @@ ImageResize -f "directory-path" -h 100 -e png -o
 ### 调整图片大小 宽自动， 高100像素， 输出格式为png, 覆盖原文件， 遍历子目录
 ```Bash
 ImageResize -f "directory-path" -h 100 -e png -o -r
+
+### 调整图片大小 宽自动， 高100像素， 输出格式为png, 覆盖原文件， 遍历子目录, 只处理GIF和PNG文件， 图片旋转90度
+```Bash
+ImageResize -f "directory-path" -h 100 -e png -o -r -t gif png -a 90
 ```
