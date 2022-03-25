@@ -37,7 +37,7 @@ ImageResize -f "directory-path" -h 100 -e png -o
 ### 调整图片大小 宽自动， 高100像素， 输出格式为png, 覆盖原文件， 遍历子目录
 ```Bash
 ImageResize -f "directory-path" -h 100 -e png -o -r
-
+```
 ### 调整图片大小 宽自动， 高100像素， 输出格式为png, 覆盖原文件， 遍历子目录, 只处理GIF和PNG文件， 图片旋转90度
 ```Bash
 ImageResize -f "directory-path" -h 100 -e png -o -r -t gif png -a 90
